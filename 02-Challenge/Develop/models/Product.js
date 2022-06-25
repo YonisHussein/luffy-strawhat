@@ -22,11 +22,18 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
+      validate: {
+        isDecimal: true
+      }
       
     },
     stock: {
       type: DataTypes.INTERGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 10,
+      validate: {
+        isNumeric: true
+      }
     },
     catorgory_ID: {
       type: DataTypes.INTERGER,
