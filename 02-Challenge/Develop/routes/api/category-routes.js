@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'catergory_name'],
+    attributes: ['id', 'category_name'],
     include: [
       {
         model: Product,
